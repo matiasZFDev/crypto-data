@@ -53,17 +53,41 @@ const CryptoSelect = ({ currencies, currency, setCurrency, }) => {
 		filterCurrencies(value.toLowerCase().trim(), current);
 	}
 
+	const setNewCurrency = (currency) => {
+		setMatchingCurrencies(null);
+		setCurrency(currency);
+		searchInputRef.current.value = '';
+	}
+
 	const handleClick = (e) => {
 		const newId = parseInt(e.target.dataset.id);
+		setNewCurrency(currencies.get(newId));
+	}
 
-		// for (const option of currenciesRef.current.children) {
-		// 	if (option.dataset.id === currency.id.toString()) {
-		// 		option.classList.remove('is-selected');
-		// 		break;
-		// 	}
-		// }
+	const selectFirstMatch = () => {
+		if (matchingCurrencies === null || matchingCurrencies.size === 0) {
+			return;
+		}
+
+		const firstMatch = matchingCurrencies[Symbol.iterator]().next().value[1];
+		setNewCurrency(firstMatch);
+	}
+
+	const handleEnter = (e) => {
+		if (e.nativeEvent.key !== 'Enter') {
+			return;
+		}
+
+		selectFirstMatch();
+	}
+
+	const handleBlur = (e) => {
+		if (e.relatedTarget?.classList.contains('currency')) {
+			return;
+		}
+
 		setMatchingCurrencies(null);
-		setCurrency(currencies.get(newId));
+		searchInputRef.current.value = '';
 	}
 
 	useEffect(() => {
@@ -76,28 +100,35 @@ const CryptoSelect = ({ currencies, currency, setCurrency, }) => {
 
 	const mapCurrencies = () => {
 		if (matchingCurrencies === null) return null;
-		console.log('pass');
 
+		const newMap = new Map(matchingCurrencies);
 		const components = [];
 		let i = 0;
 
-		for (const [id, data] of matchingCurrencies) {
+		/* push selected to start (if matching) */
+
+		if (newMap.delete(currency.id)) {
+			components.push(
+				<Currency 
+					key={currency.id}
+					data={currency}
+					handleClick={handleClick}
+					selected={true}
+				/>
+			);
+			i++;
+		}
+
+		for (const [id, data] of newMap) {
 			if (i === maxLength) {
 				break;
-			}
-
-			let selected = '';
-
-			if (id === currency.id) {
-				selected = 'is-selected';
 			}
 
 			components.push(
 				<Currency 
 					key={id}
-					data={currency}
+					data={data}
 					handleClick={handleClick}
-					selected={selected}
 				/>
 			);
 
@@ -115,12 +146,14 @@ const CryptoSelect = ({ currencies, currency, setCurrency, }) => {
 					ref={searchInputRef}
 					placeholder={currency && `${currency.name} (${currency.symbol})`} 
 					onChange={handleChange} 
+					onKeyDown={handleEnter}
+					onBlur={handleBlur}
 				/>
 				<div className="currencies" ref={currenciesRef}>
 					{mapCurrencies()}
 				</div>
 			</div>
-			<button>Search</button>
+			<button onClick={selectFirstMatch}>Search</button>
 		</div>
 	);	
 };
