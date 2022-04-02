@@ -1,0 +1,25 @@
+#header {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+#header .title {
+	font-size: 12px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0.01em;
+	color: #2F2F39;
+}
+
+#header .title span {
+	font-style: italic;
+}
+
+#links {
+
+}
+
+#links svg.github-repository path {
+	fill: black;
+}
