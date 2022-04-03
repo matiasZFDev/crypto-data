@@ -1,0 +1,31 @@
+.market-changes {
+	margin-top: 1rem;	
+}
+
+.market-changes h3 {
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.market-changes .changes {
+	display: flex;
+	justify-content: space-around;
+}
+
+.currency-change h4 {
+	font-size: 13px;
+}
+
+.currency-change .change {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.currency-change .change-time-period {
+	font-size: 11px;
+}
+
+.currency-change .change-percentage {
+	font-size: 12px;
+}
