@@ -3,14 +3,18 @@ import { ReactComponent as Bitcoin } from '../../../assets/bitcoin.svg';
 import CurrencyInfo from './CurrencyInfo';
 
 const MarketInfo = ({ info, }) => {
-	const USLocale = Intl.NumberFormat('en-US');
+	const USLocale = Intl.NumberFormat('en-US', {
+		notation: 'compact',
+		compactDisplay: 'short',
+		maximumFractionDigits: 2,
+	});
 
 	const dollarFormat = (value) => {
-		return `$${USLocale.format(value)}`;
+		return `$ ${USLocale.format(value)}`;
 	}
 
 	const symbolFormat = (value, symbol) => {
-		return `~${USLocale.format(value)} ${symbol}`;
+		return `~ ${USLocale.format(value)} ${symbol}`;
 	}
 
 	return (
