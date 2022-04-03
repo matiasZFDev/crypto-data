@@ -1,7 +1,7 @@
 #header {
 	display: flex;
 	justify-content: space-between;
-	padding: 1rem;
+	padding: 1rem 0;
 }
 
 #header .title {
@@ -14,10 +14,6 @@
 
 #header .title span {
 	font-style: italic;
-}
-
-#links {
-
 }
 
 #links svg.github-repository path {

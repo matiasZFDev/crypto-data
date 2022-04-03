@@ -1,9 +1,20 @@
+const locale = Intl.NumberFormat('en-US',{
+		maximumFractionDigits: 2,
+	});
+
 const Change = ({ change, }) => {
+	const formatPercentage = (value) => {
+		const absValue = Math.abs(value);
+		return locale.format(absValue) + "	%";
+	}
 
 	return (
 		<li className="change">
 			<span className="change-time-period">{change[0]}</span>
-			<span className="change-percentage">{change[1]}</span>
+			<span 
+				className={`change-percentage ${change[1] < 0 ? 'loss' : 'profit'}`}>
+				{formatPercentage(change[1])}
+			</span>
 		</li>
 	);
 }

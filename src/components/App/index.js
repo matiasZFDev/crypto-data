@@ -15,13 +15,26 @@ const App = () => {
 				name: 'Bitcoin',
 				symbol: 'BTC',
 				id: 1,
-				total_market_cap: '1000',
-				volume: '1000',
-				total_supply: '19000000',
-				max_supply: '21000000',
+				price: 49000,
+				marketCap: 823588,
+				volume: 56848646,
+				totalSupply: 19000000,
+				maxSupply: 21000000,
 				changes: {
 					price: {
-						'24h': '-0.36',
+						'24h': -0.36,
+						'7d': 9.34,
+						'30d': 54.16,
+					},
+					marketCap: {
+						'24h': -0.36,
+						'7d': 9.34,
+						'30d': 54.16,
+					},
+					volume: {
+						'24h': -0.36,
+						'7d': 9.34,
+						'30d': 54.16,
 					},
 				},
 			},
@@ -29,11 +42,55 @@ const App = () => {
 				name: 'Bitcoing',
 				symbol: 'BTC',
 				id: 2139,
+				price: 49000,
+				marketCap: 823588,
+				volume: 56848646,
+				totalSupply: 19000000,
+				maxSupply: 21000000,
+				changes: {
+					price: {
+						'24h': -0.36,
+						'7d': 9.34,
+						'30d': 54.16,
+					},
+					marketCap: {
+						'24h': -0.36,
+						'7d': 9.34,
+						'30d': 54.16,
+					},
+					volume: {
+						'24h': -0.36,
+						'7d': 9.34,
+						'30d': 54.16,
+					},
+				},
 			},
 			{
 				name: 'Ethereum',
 				symbol: 'ETH',
 				id: 371,
+				price: 49000,
+				marketCap: 823588,
+				volume: 56848646,
+				totalSupply: 19000000,
+				maxSupply: 21000000,
+				changes: {
+					price: {
+						'24h': -0.36,
+						'7d': 9.34,
+						'30d': 54.16,
+					},
+					marketCap: {
+						'24h': -0.36,
+						'7d': 9.34,
+						'30d': 54.16,
+					},
+					volume: {
+						'24h': -0.36,
+						'7d': 9.34,
+						'30d': 54.16,
+					},
+				},
 			},
 		];
 

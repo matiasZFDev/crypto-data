@@ -1,19 +1,36 @@
 .market-changes {
-	margin-top: 1rem;	
+	margin-top: 2.9rem;	
 }
 
 .market-changes h3 {
 	font-size: 1rem;
-	font-weight: 400;
+	font-weight: 500;
+	margin: 16px 8px 14px;
 }
 
 .market-changes .changes {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	gap: 1rem;
+	padding: 0 1rem;
+}
+
+.market-changes .currency-change {
+	flex-basis: 0;
+	flex-grow: 1;
 }
 
 .currency-change h4 {
 	font-size: 13px;
+	margin-bottom: 4px;
+	text-align: center;
+}
+
+.currency-change .change-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2px;
 }
 
 .currency-change .change {
@@ -24,8 +41,18 @@
 
 .currency-change .change-time-period {
 	font-size: 11px;
+	padding: 2px;
+	opacity: 0.6;
 }
 
 .currency-change .change-percentage {
 	font-size: 12px;
+}
+
+.change-percentage.loss {
+	color: red;
+}
+
+.change-percentage.profit {
+	color: #090;
 }

@@ -1,32 +1,30 @@
 .market-info {
 	padding: 4px;
-	margin-top: 1rem;
+	margin-top: 1.6rem;
 	display: flex;
 	gap: 1rem;
 }
 
 .market-info > svg {
-	fill: #888;
+	fill: var(--card-modal);
 	width: calc(3rem + 6vw);
 	height: calc(3rem + 6vw);
 	transform: rotate(-4deg);
 	flex-shrink: 0;
 	filter: url(#inset-shadow);
+	margin-left: 4px;
 }
 
 .info-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	flex-grow: 1;
-	gap: 1rem 0.5rem;
-}
-
-.currency-info {
-	flex-basis: max-width;
+	gap: 1rem 0;
 }
 
 .currency-info h4 {
 	font-size: 13px;
+	margin-bottom: 2px;
 }
 
 .currency-info .data {
