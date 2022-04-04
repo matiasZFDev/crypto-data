@@ -1,11 +1,12 @@
 .market-changes {
 	margin-top: 2.9rem;	
+	padding: 0 1rem;
 }
 
 .market-changes h3 {
 	font-size: 1rem;
 	font-weight: 500;
-	margin: 16px 8px 14px;
+	margin: 1rem 8px 1rem;
 }
 
 .market-changes .changes {
@@ -30,7 +31,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 2px;
+	gap: 4px;
 }
 
 .currency-change .change {
@@ -41,12 +42,11 @@
 
 .currency-change .change-time-period {
 	font-size: 11px;
-	padding: 2px;
 	opacity: 0.6;
 }
 
 .currency-change .change-percentage {
-	font-size: 12px;
+	font-size: 13px;
 }
 
 .change-percentage.loss {

@@ -3,7 +3,38 @@
 	border-radius: 8px;
 	padding: 1rem 4px 3rem;
 	height: 340px;
-	background: linear-gradient(180deg, #F1F1F1 64%, var(--card-modal) 100%), #F1F1F1;
+	background: linear-gradient(180deg, #F7F7F7 64%, var(--card-modal) 100%);
 	box-shadow: 0 2px 10px 1px var(--card-modal);
 	transition: background-color 1s linear;
+	position: relative;
+	overflow: hidden;
+}
+
+.crypto-card:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 200vh;
+	background-color: #EFEFEF88;
+	box-shadow: 0 0 30px 8px #EFEFEF88;
+	animation-name: shine;
+	animation-duration: calc(20s);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+	0% {
+		transform: rotate(-45deg) translateX(0%);
+	}
+
+	10% {
+		transform: rotate(-45deg) translateX(200vw);
+	}
+
+	100% {
+		transform: rotate(-45deg) translateX(200vw);
+	}
 }
