@@ -1,22 +1,27 @@
 .crypto-card .card-header {
 	display: flex;
-	justify-content: flex-end;
 	align-items: center;
 }
 
 .crypto-card .card-header h2 {
 	font-weight: 400;
+	font-size: 1.2rem;
+	text-align: right;
+	margin-left: auto;
 }
 
 .crypto-card .card-header .currency-symbol {
+	font-size: 10px;
 	background: #EDEDED;
 	border-radius: 2px;
 	padding: 2px 4px;
 	color: #2F2F39AA;
-	margin-right: 2rem;
-	margin-left: 0.7rem;
+	margin-right: 1rem;
+	margin-left: 6px;
 }
 
 .crypto-card .card-header .currency-price {
+	font-size: 0.9rem;
+	margin-left: auto;
 	margin-right: 1rem;
 }

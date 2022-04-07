@@ -14,6 +14,10 @@ const MarketInfo = ({ info, }) => {
 	}
 
 	const symbolFormat = (value, symbol) => {
+		if (value === undefined) {
+			return `- - ${symbol}`;
+		}
+
 		return `~ ${USLocale.format(value)} ${symbol}`;
 	}
 
@@ -22,8 +26,8 @@ const MarketInfo = ({ info, }) => {
 			<Bitcoin />
 			<div className="info-container">
 				<CurrencyInfo title="Market cap" value={dollarFormat(info.marketCap)} />
-				<CurrencyInfo title="Volume" value={dollarFormat(info.volume)} />
-				<CurrencyInfo title="Total supply" value={symbolFormat(info.totalSupply, info.symbol)} />
+				<CurrencyInfo title="Volume 24h" value={dollarFormat(info.volume)} />
+				<CurrencyInfo title="Circulating supply" value={symbolFormat(info.circulatingSupply, info.symbol)} />
 				<CurrencyInfo title="Max supply" value={symbolFormat(info.maxSupply, info.symbol)} />
 			</div>
 		</div>

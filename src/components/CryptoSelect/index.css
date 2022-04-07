@@ -55,6 +55,10 @@
 	padding: 4px 12px;
 }
 
+#select .currency.is-dropdown-select {
+	background-color: #C3C3C3;
+}
+
 #select .currency.is-selected {
 	background-color: #33d;
 	color: #fff;

@@ -2,16 +2,16 @@
 	padding: 4px;
 	margin-top: 1.6rem;
 	display: flex;
-	gap: 1rem;
+	gap: 1rem 0;
 }
 
 .market-info > svg {
 	fill: var(--card-modal);
-	width: calc(3rem + 6vw);
-	height: calc(3rem + 6vw);
+	width: calc(3rem + 4vw);
+	height: calc(3rem + 4vw);
 	transform: rotate(-4deg);
 	flex-shrink: 0;
-	filter: url(#inset-shadow);
+	filter: drop-shadow(1px 1px #555);
 	margin-left: 4px;
 }
 
@@ -20,11 +20,12 @@
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	flex-grow: 1;
 	gap: 1rem 0;
+	margin-left: 1rem;
 }
 
 .currency-info h4 {
 	font-size: 13px;
-	margin-bottom: 2px;
+	margin-bottom: 3px;
 }
 
 .currency-info .data {

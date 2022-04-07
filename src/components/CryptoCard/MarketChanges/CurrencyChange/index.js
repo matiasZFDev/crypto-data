@@ -1,11 +1,12 @@
 const locale = Intl.NumberFormat('en-US',{
-		maximumFractionDigits: 2,
+		style: 'percent',
+		maximumFractionDigits: 3,
 	});
 
 const Change = ({ change, }) => {
 	const formatPercentage = (value) => {
 		const absValue = Math.abs(value);
-		return locale.format(absValue) + "	%";
+		return locale.format(absValue);
 	}
 
 	return (

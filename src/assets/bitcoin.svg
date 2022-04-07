@@ -5,47 +5,6 @@
 	 width="394.4px" height="394.401px" viewBox="0 0 394.4 394.401" style="enable-background:new 0 0 394.4 394.401;"
 	 xml:space="preserve">
 <g>
-	<filter id='inset-shadow'>
-	  <!-- Shadow offset -->
-	  <feOffset
-	    dx='0'
-	    dy='0'
-	  />
-
-	  <!-- Shadow blur -->
-	  <feGaussianBlur
-	    stdDeviation='3'
-	    result='offset-blur'
-	  />
-
-	  <!-- Invert drop shadow to make an inset shadow -->
-	  <feComposite
-	    operator='out'
-	    in='SourceGraphic'
-	    in2='offset-blur'
-	    result='inverse'
-	  />
-	  
-	  <!-- Cut color inside shadow -->
-	  <feFlood
-	    flood-color='black'
-	    flood-opacity='.95'
-	    result='color'
-	  />
-	  <feComposite
-	    operator='in'
-	    in='color'
-	    in2='inverse'
-	    result='shadow'
-	  />
-
-	  <!-- Placing shadow over element -->
-	  <feComposite
-	    operator='over'
-	    in='shadow'
-	    in2='SourceGraphic'
-	  />
-	</filter>
 	<path d="M197.2,0C88.292,0,0,88.292,0,197.201C0,306.109,88.292,394.4,197.2,394.4c108.909,0,197.2-88.291,197.2-197.199
 		C394.4,88.292,306.109,0,197.2,0z M197.2,362.005c-91.018,0-164.805-73.787-164.805-164.805
 		c0-91.019,73.787-164.805,164.805-164.805c91.019,0,164.806,73.787,164.806,164.805C362.006,288.218,288.219,362.005,197.2,362.005

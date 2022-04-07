@@ -1,19 +1,17 @@
 .market-changes {
 	margin-top: 2.9rem;	
-	padding: 0 1rem;
 }
 
 .market-changes h3 {
 	font-size: 1rem;
-	font-weight: 500;
-	margin: 1rem 8px 1rem;
+	font-weight: 400;
+	margin: 1rem 0 2rem 14px;
 }
 
 .market-changes .changes {
 	display: flex;
 	justify-content: center;
-	gap: 1rem;
-	padding: 0 1rem;
+	padding: 0 0.5rem;
 }
 
 .market-changes .currency-change {
