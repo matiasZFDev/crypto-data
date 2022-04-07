@@ -80,9 +80,9 @@ const CryptoSelect = ({ currencies, currency, setCurrency, }) => {
 		const activeElement = matchingCurrencies.size === 1 || activeCurrency === null
 			? currenciesRef.current.firstElementChild
 			: activeCurrency;
-		const activeCurrency = matchingCurrencies.get(activeElement.dataset.id);
+		const currentActive = matchingCurrencies.get(activeElement.dataset.id);
 		setActiveCurrency(null);
-		setNewCurrency(activeCurrency);
+		setNewCurrency(currentActive);
 	}
 
 	const handleKeyDown = (e) => {
