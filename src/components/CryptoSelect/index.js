@@ -139,8 +139,7 @@ const CryptoSelect = ({ currencies, currency, setCurrency, }) => {
 	}, [activeCurrency]);
 
 	const handleBlur = (e) => {
-		if (e.relatedTarget?.classList.contains('currency')
-			|| e.relatedTarget?.parentNode.id === 'select') {
+		if (e.relatedTarget?.classList.contains('currency')) {
 			return;
 		}
 
@@ -188,6 +187,7 @@ const CryptoSelect = ({ currencies, currency, setCurrency, }) => {
 					key={id}
 					data={data}
 					handleClick={handleClick}
+					selected={false}
 				/>
 			);
 
