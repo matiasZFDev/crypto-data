@@ -143,6 +143,10 @@ const CryptoSelect = ({ currencies, currency, setCurrency, }) => {
 			return;
 		}
 
+		if (e.relatedTarget?.parentElement.id === 'select') {
+			return;
+		}
+
 		setMatchingCurrencies(null);
 		setActiveCurrency(null);
 		searchInputRef.current.value = '';
