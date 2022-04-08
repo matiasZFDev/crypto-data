@@ -3,6 +3,7 @@
 	margin-top: 1.6rem;
 	display: flex;
 	gap: 1rem 0;
+	align-items: center;
 }
 
 .market-info > svg {
@@ -23,11 +24,17 @@
 	margin-left: 1rem;
 }
 
+@media screen and (min-width: 600px) {
+	.info-container {
+		justify-items: center;
+	}
+}
+
 .currency-info h4 {
-	font-size: 13px;
+	font-size: calc(10px + 0.8vw);
 	margin-bottom: 3px;
 }
 
 .currency-info .data {
-	font-size: 11px;
+	font-size: calc(8px + 0.8vw);
 }

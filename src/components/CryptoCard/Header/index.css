@@ -1,17 +1,17 @@
 .crypto-card .card-header {
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
 }
 
 .crypto-card .card-header h2 {
 	font-weight: 400;
-	font-size: 1.2rem;
-	text-align: right;
-	margin-left: auto;
+	font-size: calc(14px + 1vw);
+	margin-left: 2rem;
 }
 
 .crypto-card .card-header .currency-symbol {
-	font-size: 10px;
+	font-size: calc(9px + 0.6vw);
 	background: #EDEDED;
 	border-radius: 2px;
 	padding: 2px 4px;
@@ -21,7 +21,18 @@
 }
 
 .crypto-card .card-header .currency-price {
-	font-size: 0.9rem;
+	font-size: calc(12px + 1vw);
 	margin-left: auto;
-	margin-right: 1rem;
+	margin-right: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+	.crypto-card .card-header h2 {
+		margin-left: 4rem;
+	}
+
+	.crypto-card .card-header .currency-price {
+		margin-left: auto;
+		margin-right: 4rem;
+	}
 }
